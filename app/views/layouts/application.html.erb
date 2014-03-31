@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SampleApp</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/stylesheets' %>
+
+</head>
+<body>
+	<div class ="container">
+		<%= render 'layouts/header' %>
+
+		<section class="round">
+			<%= yield %>
+		</section>
+
+		<%=render 'layouts/footer'  %>
+		<%= debug(params) if Rails.env.development? %>   
+		<!-- 2.0.0-p353 :001 > Rails.env    //inside the console 
+         => "development" 
+         2.0.0-p353 :002 > Rails.env.development?
+         => true 
+         2.0.0-p353 :003 >  -->
+	</div> 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
